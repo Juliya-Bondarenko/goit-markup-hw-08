@@ -1,0 +1,209 @@
+footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: $secondary-bg-color;
+}
+
+@media screen and (min-width: $tablet) {
+  .footer-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+}
+
+@media screen and (min-width: $desktop) {
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+}
+
+.footer-address {
+  margin-bottom: 60px;
+  @include title(normal, 14px, 1.71);
+  text-align: center;
+
+  @media screen and (min-width: $tablet) {
+    margin-left: 76px;
+
+    @media screen and (min-width: $desktop) {
+      text-align: start;
+      margin-left: 0;
+      margin-bottom: 0;
+      margin-right: 70px;
+    }
+  }
+}
+
+.address {
+  display: inline-block;
+  margin-bottom: 8px;
+
+  font-style: normal;
+  color: #ffffff;
+
+  @media screen and (min-width: $desktop) {
+    display: block;
+    width: 231px;
+    margin-top: 0;
+    margin-bottom: 9px;
+  }
+}
+
+.footer-contacts {
+  font-style: normal;
+
+  & .footer-item:first-child {
+    margin-bottom: 8px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    & .footer-item:first-child {
+      margin-bottom: 9px;
+    }
+  }
+}
+
+.footer-contacts .link {
+  transition: color 250ms $time-function;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+
+.footer-container b {
+  display: block;
+
+  @include title(bold, 14px, 1.14);
+  text-align: center;
+
+  text-transform: uppercase;
+
+  color: #ffffff;
+
+  @media screen and (min-width: $desktop) {
+    text-align: left;
+  }
+}
+
+.footer-socials {
+  @media screen and (min-width: $tablet) {
+    margin-right: 89px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: 206px;
+    margin-left: 0;
+    margin-right: 93px;
+  }
+}
+
+.footer-socials .get-us {
+  margin-bottom: 17px;
+}
+
+.footer-socials .list {
+  display: flex;
+  justify-content: center;
+
+  & .social-item:not(:last-child) {
+    margin-right: 10px;
+  }
+
+  @media screen and (max-width: 767px) {
+    margin-bottom: 60px;
+  }
+}
+
+.footer-socials .social-link {
+  @extend %flex-center;
+
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+
+  transition: background-color 250ms $time-function;
+
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
+  }
+}
+
+.footer-socials .social-icon {
+  width: 20px;
+  height: 20px;
+
+  fill: currentColor;
+}
+
+.footer-form .subscribe {
+  margin-bottom: 17px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media screen and (min-width: $desktop) {
+    flex-direction: row;
+    align-items: baseline;
+    width: 570px;
+    height: 86px;
+  }
+}
+
+.subscribe-input {
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 450px;
+  height: 50px;
+
+  padding-left: 16px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+
+  @include title(normal, 16px, 1.25);
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: (0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  outline: transparent;
+
+  color: #ffffff;
+  background-color: transparent;
+
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 0;
+    margin-right: 12px;
+    width: 358px;
+  }
+}
+
+.subscribe-icon {
+  width: 24px;
+  height: 24px;
+  margin-left: 10px;
+}
+
+.subscribe-button {
+  @extend %flex-center;
+  width: 200px;
+  height: 50px;
+  outline: transparent;
+
+  @include title(bold, 16px, 1.87);
+  letter-spacing: 0.06em;
+
+  color: #ffffff;
+  background-color: $accent-color;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}

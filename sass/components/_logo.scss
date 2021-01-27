@@ -1,0 +1,43 @@
+.logo {
+  @include title(bold, 24px, 1.2);
+    font-family: Raleway, sans-serif;
+
+  @media screen and (min-width: $desktop) {
+    font-size: 26px;
+  }
+}
+
+.logo-web {
+  color: $accent-color;
+  text-decoration: none;
+}
+
+.logo-studio {
+  color: black;
+}
+
+.footer-address .logo-studio {
+  color: $basic-bg-color;
+}
+
+.info .logo {
+  padding-top: 16px;
+  padding-bottom: 16px;
+
+  @media screen and (min-width: $tablet) {
+    margin-right: 88px;
+    padding-top: 26px;
+    padding-bottom: 26px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    margin-right: 93px;
+    padding-top: 24px;
+    padding-bottom: 25px;
+  }
+}
+
+.company .logo {
+  display: inline-block;
+  margin-bottom: 20px;
+}

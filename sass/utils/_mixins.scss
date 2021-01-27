@@ -1,0 +1,8 @@
+ @mixin title($weight, $size, $height) {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: $weight;
+    font-size: $size;
+    line-height: $height;
+    letter-spacing: 0.03em;
+ }

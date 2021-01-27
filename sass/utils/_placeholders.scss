@@ -1,0 +1,32 @@
+ %flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+ }
+
+ %section-padding {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+ %section-title {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+    letter-spacing: 0.03em;
+
+    color: $secondary-text-color;
+ }
+
+ %block-title {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+ }
