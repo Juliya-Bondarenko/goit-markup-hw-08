@@ -717,13 +717,13 @@ input:hover {
   margin-bottom: 20px;
 }
 
-.form-input .comment {
+.form-input.comment {
   resize: none;
   height: 120px;
   padding: 12px 16px;
 }
 
-.form-input .comment::placeholder {
+.form-input.comment::placeholder {
   font-family: Roboto;
   font-style: normal;
   font-weight: normal;
