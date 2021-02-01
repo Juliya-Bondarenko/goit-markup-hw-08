@@ -1,8 +1,10 @@
+
+
 .navigation {
   position: relative;
 }
 
-.chapter .navigation {
+.chapter {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -26,9 +28,8 @@
     display: none;
   }
 }
-
-.icon-close,
-.icon-menu {
+.icon-menu,
+.icon-close { 
   fill: currentColor;
 }
 
@@ -151,7 +152,7 @@
   }
 }
 
-.contact {
+.header-address {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -181,7 +182,7 @@
   }
 }
 
-.contact .link {
+.header-address .link {
   display: flex;
   align-items: center;
 
@@ -194,7 +195,7 @@
   }
 }
 
-.contact .item {
+.header-address .contact {
   margin-bottom: 16px;
 
   &:last-child {
@@ -215,7 +216,7 @@
   }
 }
 
-.icon {
+.contact-icon {
   margin-right: 10px;
   fill: currentColor;
 

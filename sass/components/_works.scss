@@ -1,140 +1,178 @@
-.border {
-  border-top: 1px solid #ececec;
+.portfolio-section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @media screen and (min-width: $desktop) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+
+.header-line {
+  border-bottom: 1px solid #ececec;
+}
+
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 25px;
+
+  & .item:not(:last-child) {
+    margin-right: 8px;
+  }
+
+  @media screen and (min-width: $tablet) {
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 50px;
+  }
+}
+
+.key {
+  display: inline-block;
+
+  padding: 6px 22px;
+  outline: none;
+
+  @media screen and (max-width: 767px) {
+    margin-bottom: 15px;
+  }
+
+  @include title(500, 16px, 1.63);
+  text-align: center;
+
+  color: $secondary-text-color;
+  background-color: #f5f4fa;
+
+  transition: background-color 250ms $time-function, color 250ms $time-function, box-shadow 250ms $time-function;
+
+  &:hover,
+  &:focus {
+    color: $basic-bg-color;
+    background-color: $accent-color;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+}
+
+.card-img {
+ width: 100%; 
+}
+
+.topic {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 22px;
+  padding-right: 14px;
+
+  width: 100%;
+  border-left: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.works {
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.card {
+  margin-bottom: 30px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @media screen and (min-width: $tablet) {
+    width: calc((100% - 30px) / 2);
+    margin-right: 30px;
+    margin-bottom: 30px;
+
+    @media screen and (max-width: 1199px) {
+      &:nth-child(2n) {
+        margin-right: 0;
+      }
+
+      &:nth-last-child(-n + 2) {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  @media screen and (min-width: $desktop) {
+    @include calc-3n();
+  }
+}
+
+.ref {
+  transition: box-shadow 250ms $time-function;
+
+  &:hover,
+  &:focus {
+    display: block;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+  }
+
+  &:hover .exposition-text,
+  &:focus .exposition-text {
+    transform: translateY(0);
+  }
 }
 
 .works .name {
   margin-top: 0;
-  margin-bottom: 0;
-
-  color: $secondary-text-color;
+  margin-bottom: 4px;
 
   @include title(bold, 18px, 2);
   letter-spacing: 0.06em;
+
+  color: $secondary-text-color;
 }
 
 .works .type {
   margin-top: 0;
   margin-bottom: 0;
 
-  color: $basic-text-color;
-
-  @include title(normal, 16px, 1.87);
-}
-
-.filters {
-  @extend %flex-center;
-}
-
-.key {
-  padding: 5.95px 22px;
-  border-radius: 4px;
-  border: none;
-
-  color: $secondary-text-color;
-  background-color: #f5f4fa;
-
-  @include title(500, 16px, 1.62);
-  text-transform: none;
-  text-align: center;
-  cursor: pointer;
-
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  
-    &:hover,
-    &:focus {
-      background: $accent-color;
-      color: $basic-bg-color;
-    }
-}
-
-.filters .item:not(:last-child) {
-  margin-right: 8px;
-}
-
-.works {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-img {
-  display: block;
-  max-width: 100%;
-  max-height: 100%;
-}
-
-.card {
-  width: 370px;
-  margin-right: 30px;
-  margin-bottom: 30px;
-}
-
-.card:nth-child(3n) {
-  margin-right: 0;
-}
-
-.card:nth-last-child(-n + 3) {
-  margin-bottom: 0;
-}
-
-.ref {
-  display: block;
-
-  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  text-decoration: none;
-  
-    &:hover,
-    &:focus {
-      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-        1px 4px 6px rgba(0, 0, 0, 0.16);
-    }
-}
-
-.card .topic {
-  padding: 20px 24px;
-  border-right: 1px solid #eeeeee;
-  border-bottom: 1px solid #eeeeee;
-  border-left: 1px solid #eeeeee;
+  @include title(normal, 16px, 1.88);
 }
 
 .card-exposition {
   position: relative;
-  width: 370px;  
-  height: auto;
   overflow: hidden;
-
-    & img  {
-      height: 100%;
-    }
 }
 
 .exposition-text {
-  margin-top: 0;
-  margin-bottom: 0;
-  padding: 63px 24px;
-
-  font-style: normal;
-  font-weight: normal;
-  font-size: 18px;
-  line-height: 1.56;
-  letter-spacing: 0.03em;
-
-  color: $basic-bg-color;
-}
-
-.exposition {
   position: absolute;
+  top: 0;
   left: 0;
-  bottom: 0;
+  transform: translateY(100%);
 
   width: 100%;
   height: 100%;
+  margin-top: 0;
+  margin-bottom: 110px;
+  padding: 77px 24px;
+
+  @media screen and (min-width: $tablet) {
+    padding: 49px 24px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    padding: 63px 24px;
+  }
+
+  @include title(normal, 18px, 1.56);
 
   background-color: rgba(33, 150, 243, 0.9);
-  transform: translateY(100%);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  color: $basic-bg-color;
+
+  transition: transform 250ms $time-function;
 }
 
-.ref:hover .exposition,
-.ref:focus .exposition {
-  transform: translateY(0);
-}
+

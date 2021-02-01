@@ -202,6 +202,7 @@ footer {
 
   @include title(bold, 16px, 1.87);
   letter-spacing: 0.06em;
+  text-align: center;
 
   color: #ffffff;
   background-color: $accent-color;

@@ -6,6 +6,10 @@ body {
   letter-spacing: 0.03em;
 }
 
+body.modal-open {
+  overflow: hidden;
+}
+
 ul {
   list-style: none;
 }
@@ -17,16 +21,26 @@ a {
   cursor: pointer;
 }
 
+button {
+  border-radius: 4px;
+  border-color: transparent;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+input:hover {
+  cursor: pointer;
+}
+
 .visually-hidden {
   position: absolute;
-  width: 1px solid #c4c4c4;
-  height: 1px solid #c4c4c4;
-  margin: -1px solid #c4c4c4;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
   border: 0;
   padding: 0;
-
-  white-space: nowrap;
-  clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
@@ -34,4 +48,20 @@ a {
 .list {
   padding: 0;
   margin: 0;
+}
+
+.section-title {
+  margin-top: 0;
+  margin-bottom: 30px;
+
+  @include title(bold, 28px, 1.18);
+  text-align: center;
+
+  color: $secondary-text-color;
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 50px;
+    @include title(bold, 36px, 1.17);
+    text-align: center;
+  }
 }

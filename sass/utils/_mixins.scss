@@ -6,3 +6,39 @@
     line-height: $height;
     letter-spacing: 0.03em;
  }
+
+ @mixin calc-2n() {
+  width: calc((100% - 30px) / 2);
+  margin-right: 30px;
+  margin-bottom: 30px;
+
+  &:nth-child(2n) {
+    margin-right: 0;
+  }
+
+  &:nth-last-child(-n + 2) {
+    margin-bottom: 0;
+  }
+}
+
+@mixin calc-3n() {
+  width: calc((100% - 60px) / 3);
+  margin-right: 30px;
+  margin-bottom: 30px;
+
+  &:nth-child(3n) {
+    margin-right: 0;
+  }
+
+  &:nth-last-child(-n + 3) {
+    margin-bottom: 0;
+  }
+}
+
+@mixin calc-4n() {
+  width: calc((100% - 90px) / 4);
+
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+}
